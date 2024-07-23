@@ -7,6 +7,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.time.Duration;
+
 public class DriverFactory {
 
     public static ThreadLocal<WebDriver> threadLocal = new ThreadLocal<>();
@@ -18,11 +20,10 @@ public class DriverFactory {
             case "chrome":
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--start-maximized");
-                threadLocal.set(new ChromeDriver());
+                threadLocal.set(new ChromeDriver(options));
                 break;
             case "firefox":
                 threadLocal.set(new FirefoxDriver());
-
                 break;
             default:
                 EdgeOptions options1=new EdgeOptions();
@@ -33,7 +34,8 @@ public class DriverFactory {
     }
     public static WebDriver getDriver()
     {
-        return threadLocal.get();
+        // threadLocal.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        return threadLocal.get() ;
     }
 
     public static void tearDown()

@@ -13,20 +13,6 @@ public class ITestResult implements ITestListener {
         LogUtility.info("tc pass...");
     }
 
-    public void onTestFailure(org.testng.ITestResult result) {
-        LogUtility.error("tc fail...");
-    }
-
-    public void onTestSkipped(org.testng.ITestResult result) {
-        LogUtility.warn("tc skipped...");
-    }
-    public void onStart(ITestContext context) {
-        LogUtility.info("Test execute....");
-    }
-
-    public void onFinish(ITestContext context) {
-        LogUtility.info("Test finished.....");
-    }
 }
 
 
