@@ -22,6 +22,11 @@ public class P02_HomePage {
     public static List<WebElement> allProducts ;
     public static List<WebElement> selectedProd ;
 
+    public By iconCartEle()
+    {
+        return iconCartCount;
+    }
+
     public P02_HomePage addProductsToCart()
     {
         allProducts  =driver.findElements(addToCartBtns);

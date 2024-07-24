@@ -1,5 +1,7 @@
 package Utilities;
 
+import com.assertthat.selenium_shutterbug.core.Capture;
+import com.assertthat.selenium_shutterbug.core.Shutterbug;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,6 +18,7 @@ import java.util.Random;
 import java.util.Set;
 
 public class Utility {
+    public static final String screen_Path ="tests-outputs/screen_shoots/";
 
     //TODO::click on ele
     public static void clickEle(WebDriver driver , By locator)
@@ -46,11 +49,24 @@ public class Utility {
     }
 
     //TODO::Take screen shots
-    public static String screen_Path ="tests-outputs/screen-shots/";
-    public static void takeScreenShot(WebDriver driver , String screenNane) throws IOException {
+
+    public static void takeScreenShot(WebDriver driver , String screenName) throws IOException {
         File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        File dis = new File(screen_Path+screenNane+"_"+timeStemp()+".png");
+        File dis = new File(screen_Path + screenName + "_" +timeStemp()+".png");
         FileUtils.copyFile(src,dis);
+    }
+
+    //TODO:take ful screen shots
+    public static void takeFullScreenShot(WebDriver driver , By locator)
+    {
+        try {
+            Shutterbug.shootPage(driver, Capture.FULL_SCROLL)
+                    .highlight(driver.findElement(locator))
+                    .save(screen_Path);
+        }catch (Exception e)
+        {
+            LogUtility.error(e.getMessage());
+        }
     }
 
     //TODO::time stemp
