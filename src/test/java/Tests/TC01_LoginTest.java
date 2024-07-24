@@ -14,25 +14,12 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import static DriverFactory.DriverFactory.*;
 
-
-
-
-
 @Listeners({ITestResult.class, IInovkedListener.class})
-public class TC01_LoginTest {
-    //public WebDriver driver ;
+public class TC01_LoginTest extends TestBase {
+
     private final String userName = DataUtility.readJsonFile("userlogin","name");
     private final String userPassword = DataUtility.readJsonFile("userlogin","password");
 
-    @BeforeMethod
-    public void starting()
-    {
-        setup(DataUtility.readPropertyFile("env","Browser"));
-          LogUtility.info("open base url....");
-        getDriver().get(DataUtility.readPropertyFile("env","URL"));
-          LogUtility.info("redirect to url...");
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-    }
 
     @Test
     public void validLoginTC()
@@ -46,12 +33,5 @@ public class TC01_LoginTest {
 
     }
 
-
-
-    @AfterMethod
-    public void cleanUp()
-    {
-        tearDown();
-    }
 
 }
