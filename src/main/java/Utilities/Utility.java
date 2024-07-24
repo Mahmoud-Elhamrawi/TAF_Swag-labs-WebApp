@@ -20,21 +20,21 @@ public class Utility {
     //TODO::click on ele
     public static void clickEle(WebDriver driver , By locator)
     {
-        new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(locator));
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(locator));
         driver.findElement(locator).click();
     }
 
     //TODO::send text
     public static void sendText(WebDriver driver , By locator , String  text)
     {
-        new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOfElementLocated(locator));
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(locator));
         driver.findElement(locator).sendKeys(text);
     }
 
     //TODO::get text from Element
      public static String getTextEle(WebDriver driver , By locator)
      {
-         new WebDriverWait(driver , Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOfElementLocated(locator));
+         new WebDriverWait(driver , Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(locator));
          return driver.findElement(locator).getText();
 
      }
