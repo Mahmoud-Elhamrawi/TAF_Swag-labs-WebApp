@@ -26,10 +26,22 @@ public class TC02_addToCartTest extends TestBase{
                .clickLoginBtn()
                .addProductsToCart() ;
 
-        Assert.assertFalse(new P02_HomePage(getDriver()).compareCountCartWithSelectedProd());
+        Assert.assertTrue(new P02_HomePage(getDriver()).compareCountCartWithSelectedProd());
 
 
 
+    }
+
+    @Test
+    public void addRandomProductsToCart()
+    {
+        new P01_LoginPage(getDriver())
+                .enterUserName(DataUtility.readJsonFile("userlogin","name"))
+                .enterUserPassword(DataUtility.readJsonFile("userlogin","password"))
+                .clickLoginBtn()
+                .addRandomProductsToCart();
+
+        Assert.assertTrue(new P02_HomePage(getDriver()).compareCountCartWithSelectedProd());
     }
 
 
