@@ -45,6 +45,12 @@ public class TC02_addToCartTest extends TestBase{
 
         Assert.assertTrue(new P02_HomePage(getDriver()).compareCountCartWithSelectedProd());
     }
+
+
+
+
+
+
     @Test
     public void navigateToCartPage()
     {
@@ -53,7 +59,7 @@ public class TC02_addToCartTest extends TestBase{
                 .enterUserPassword(DataUtility.readJsonFile("userlogin","password"))
                 .clickLoginBtn()
                 .addRandomProductsToCart()
-                        .navigateToCartPage();
+                .navigateToCartPage();
         LogUtility.info("cartPageUrl: "+DataUtility.readPropertyFile("env","cartPage"));
 
         Assert.assertTrue(new P02_HomePage(getDriver()).verifyOnCartPage(DataUtility.readPropertyFile("env","cartPage")));
