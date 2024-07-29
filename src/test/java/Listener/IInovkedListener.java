@@ -15,14 +15,14 @@ import static DriverFactory.DriverFactory.getDriver;
 public class IInovkedListener implements IInvokedMethodListener {
 
     public void beforeInvocation(IInvokedMethod method, ITestResult testResult, ITestContext context) {
-        LogUtility.info("beforeInvocation"+testResult.getName());
+        LogUtility.info("beforeInvocation : "+testResult.getName());
 
     }
 
 
 
     public void afterInvocation(IInvokedMethod method, ITestResult testResult, ITestContext context) {
-        LogUtility.info("afterInvocation"+testResult.getName());
+        LogUtility.info("afterInvocation : "+testResult.getName());
         if(testResult.getStatus() == ITestResult.FAILURE)
         {
 
