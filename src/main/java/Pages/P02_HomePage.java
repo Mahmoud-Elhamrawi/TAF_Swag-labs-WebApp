@@ -24,8 +24,11 @@ public class P02_HomePage {
     private final By selectedProducts = By.xpath("//button[.='Remove']") ;
     private final By cartIcon = By.className("shopping_cart_link");
 
+    private final By priceForSelectedItem = By.xpath("//button[.='Remove']//preceding-sibling::div[@class=\"inventory_item_price\"]");
     public static List<WebElement> allProducts ;
     public static List<WebElement> selectedProd ;
+    public static List<WebElement> priceSelectedProd ;
+    static float price=0;
 
     public By iconCartEle()
     {
@@ -61,6 +64,31 @@ public class P02_HomePage {
 
         return  this ;
     }
+
+    //get price for selected products
+    public String totalPriceOfSelectedItem()
+    {
+        try {
+            priceSelectedProd = driver.findElements(priceForSelectedItem);
+            for (int i=1;i<=priceSelectedProd.size();i++)
+            {
+                By priceOfSelectProds = By.xpath("(//button[.='Remove']//preceding-sibling::div[@class=\"inventory_item_price\"])["+i+"]");
+                String totalPrice =  Utility.getTextEle(driver,priceOfSelectProds);
+                price += Float.parseFloat(totalPrice.replace("$",""));
+
+            }
+            LogUtility.info("totalPriceOfSelectedItem : "+ price);
+            return String.valueOf(price);
+        }catch (Exception e)
+        {
+            LogUtility.error(e.getMessage());
+        }
+        return "0";
+    }
+
+
+
+
     //go to cart page
     public P03_cartPage navigateToCartPage()
     {
