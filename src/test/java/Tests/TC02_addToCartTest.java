@@ -5,6 +5,7 @@ import Listener.ITestResult;
 import Pages.P01_LoginPage;
 import Pages.P02_HomePage;
 import Utilities.DataUtility;
+import Utilities.LogUtility;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -39,9 +40,23 @@ public class TC02_addToCartTest extends TestBase{
                 .enterUserName(DataUtility.readJsonFile("userlogin","name"))
                 .enterUserPassword(DataUtility.readJsonFile("userlogin","password"))
                 .clickLoginBtn()
-                .addRandomProductsToCart();
+                .addRandomProductsToCart() ;
+
 
         Assert.assertTrue(new P02_HomePage(getDriver()).compareCountCartWithSelectedProd());
+    }
+    @Test
+    public void navigateToCartPage()
+    {
+        new P01_LoginPage(getDriver())
+                .enterUserName(DataUtility.readJsonFile("userlogin","name"))
+                .enterUserPassword(DataUtility.readJsonFile("userlogin","password"))
+                .clickLoginBtn()
+                .addRandomProductsToCart()
+                        .navigateToCartPage();
+        LogUtility.info("cartPageUrl: "+DataUtility.readPropertyFile("env","cartPage"));
+
+        Assert.assertTrue(new P02_HomePage(getDriver()).verifyOnCartPage(DataUtility.readPropertyFile("env","cartPage")));
     }
 
 

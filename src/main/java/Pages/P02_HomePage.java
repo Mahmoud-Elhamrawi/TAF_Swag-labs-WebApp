@@ -22,6 +22,7 @@ public class P02_HomePage {
     private final By addToCartBtns = By.xpath("//button[@class]");
     private final By iconCartCount = By.className("shopping_cart_badge");
     private final By selectedProducts = By.xpath("//button[.='Remove']") ;
+    private final By cartIcon = By.className("shopping_cart_link");
 
     public static List<WebElement> allProducts ;
     public static List<WebElement> selectedProd ;
@@ -60,6 +61,24 @@ public class P02_HomePage {
 
         return  this ;
     }
+    //go to cart page
+    public P03_cartPage navigateToCartPage()
+    {
+        Utility.clickEle(driver,cartIcon);
+        return new P03_cartPage(driver);
+    }
+
+    //verify on cart page url
+    public  boolean verifyOnCartPage(String expectUrl)
+    {
+        return new WebDriverWait(driver,Duration.ofSeconds(10))
+                .until(ExpectedConditions.urlToBe(expectUrl));
+    }
+
+
+
+
+
 
    public String getCountCart() {
        try {
