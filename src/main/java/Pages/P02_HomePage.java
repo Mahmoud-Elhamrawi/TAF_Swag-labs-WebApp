@@ -5,8 +5,12 @@ import Utilities.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
+import java.util.Set;
 
 public class P02_HomePage {
     public final WebDriver driver;
@@ -41,6 +45,22 @@ public class P02_HomePage {
         return this ;
     }
 
+
+    //add random products to cart
+    public P02_HomePage addRandomProductsToCart()
+    {
+         Set<Integer> uniqeRandom =Utility.setRandoms(3,6);
+         for (int random:uniqeRandom)
+         {
+             LogUtility.info("random number :"+random);
+             By addToCartBtns = By.xpath("(//button[@class])["+random+"]");
+             Utility.clickEle(driver,addToCartBtns);
+         }
+
+
+        return  this ;
+    }
+
    public String getCountCart() {
        try {
            LogUtility.info("Count of products on cart: "+Utility.getTextEle(driver, iconCartCount));
@@ -71,6 +91,7 @@ public class P02_HomePage {
     public boolean compareCountCartWithSelectedProd()
     {
         return getCountCart().equals(getSelectedProducts());
+       // return new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.urlToBe())
     }
 
 

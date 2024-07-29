@@ -82,15 +82,15 @@ public class Utility {
      //TODO:generate random numbers
       public static int randomNumbs(int upper)
       {
-          return new Random().nextInt(upper);
+          return new Random().nextInt(upper)+1;
       }
 
-       public static Set<Integer> setRandoms(int need , int total)
+       public static Set<Integer> setRandoms(int needNum , int totalNum)
        {
            Set<Integer> setNumbers = new HashSet<>();
-           while (setNumbers.size()<need)
+           while (setNumbers.size()<needNum)
            {
-               int random  = randomNumbs(total);
+               int random  = randomNumbs(totalNum);
                setNumbers.add(random);
            }
            return setNumbers ;
