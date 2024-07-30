@@ -35,7 +35,7 @@ public class TC06_checkoutOverViewTest extends  TestBase{
                 .fillInfoData(FIRSTNAME,LASTNAME,ZIPCODE)
                 .clickOnContinueBtn();
 
-        LogUtility.info(FIRSTNAME+LASTNAME+ZIPCODE);
+        LogUtility.info(FIRSTNAME+"_"+LASTNAME+"_"+ZIPCODE);
         Assert.assertTrue(new P06_CheckoutOverViewPage(getDriver()).compareTotalPriceWithGetTotal());
 
     }

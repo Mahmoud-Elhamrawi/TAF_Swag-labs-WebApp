@@ -1,5 +1,6 @@
 package Pages;
 
+import Utilities.LogUtility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -11,13 +12,14 @@ public class P07_finishOrder {
         this.driver = driver ;
     }
 
-    private final By finishOrderBtn = By.id("finish");
+    private final By textMsg = By.tagName("h2");
 
 
 
     public boolean checkVisibilityOfMSG()
     {
-        return driver.findElement(By.tagName("finish")).isDisplayed();
+        LogUtility.info("msg : "+driver.findElement(textMsg).getText());
+        return driver.findElement(textMsg).isDisplayed();
     }
 
 
