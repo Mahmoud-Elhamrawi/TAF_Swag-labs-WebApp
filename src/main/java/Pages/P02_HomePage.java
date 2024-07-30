@@ -41,7 +41,6 @@ public class P02_HomePage {
         LogUtility.info("products are add: "+allProducts.size());
         for(int i=1;i<=allProducts.size();i++)
         {
-
             By addToCartBtns = By.xpath("(//button[@class])["+i+"]");
             Utility.clickEle(driver,addToCartBtns);
 
@@ -60,7 +59,6 @@ public class P02_HomePage {
              By addToCartBtns = By.xpath("(//button[@class])["+random+"]");
              Utility.clickEle(driver,addToCartBtns);
          }
-
 
         return  this ;
     }
@@ -85,8 +83,6 @@ public class P02_HomePage {
         }
         return "0";
     }
-
-
 
 
     //go to cart page
