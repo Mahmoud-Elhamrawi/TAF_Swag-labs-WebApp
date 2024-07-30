@@ -22,6 +22,7 @@ public class P03_cartPage {
     private final By checkoutBtn = By.id("checkout");
     List<WebElement> priceOfProds;
 
+
     static float totalPrice =0 ;
 
     private String totalPriceOfProdsFromCartPage()
@@ -49,11 +50,13 @@ public class P03_cartPage {
         return totalPriceOfProdsFromCartPage().equals(price);
     }
 
+
     public P04_checkoutPage naviagteTOCheckOut()
     {
         Utility.clickEle(driver , checkoutBtn);
         return new P04_checkoutPage(driver);
     }
+
 
 
 

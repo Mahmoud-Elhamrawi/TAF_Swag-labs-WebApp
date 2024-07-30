@@ -58,7 +58,9 @@ public class TC02_addToCartTest extends TestBase{
                 .enterUserName(DataUtility.readJsonFile("userlogin","name"))
                 .enterUserPassword(DataUtility.readJsonFile("userlogin","password"))
                 .clickLoginBtn()
+
                 .addRandomProductsToCart(2,6)
+
                 .navigateToCartPage();
         LogUtility.info("cartPageUrl: "+DataUtility.readPropertyFile("env","cartPage"));
 
