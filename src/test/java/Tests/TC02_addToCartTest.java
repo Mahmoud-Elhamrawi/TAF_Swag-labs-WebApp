@@ -40,7 +40,7 @@ public class TC02_addToCartTest extends TestBase{
                 .enterUserName(DataUtility.readJsonFile("userlogin","name"))
                 .enterUserPassword(DataUtility.readJsonFile("userlogin","password"))
                 .clickLoginBtn()
-                .addRandomProductsToCart() ;
+                .addRandomProductsToCart(2,6) ;
 
 
         Assert.assertTrue(new P02_HomePage(getDriver()).compareCountCartWithSelectedProd());
@@ -58,7 +58,7 @@ public class TC02_addToCartTest extends TestBase{
                 .enterUserName(DataUtility.readJsonFile("userlogin","name"))
                 .enterUserPassword(DataUtility.readJsonFile("userlogin","password"))
                 .clickLoginBtn()
-                .addRandomProductsToCart()
+                .addRandomProductsToCart(2,6)
                 .navigateToCartPage();
         LogUtility.info("cartPageUrl: "+DataUtility.readPropertyFile("env","cartPage"));
 

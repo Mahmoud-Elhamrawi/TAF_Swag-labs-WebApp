@@ -17,8 +17,11 @@ public class P03_cartPage {
         this.driver = driver ;
     }
 
+
     private final By priceOfSelectedProds = By.xpath("//button[.='Remove']//preceding-sibling::div[@class=\"inventory_item_price\"]");
+    private final By checkoutBtn = By.id("checkout");
     List<WebElement> priceOfProds;
+
     static float totalPrice =0 ;
 
     private String totalPriceOfProdsFromCartPage()
@@ -46,6 +49,11 @@ public class P03_cartPage {
         return totalPriceOfProdsFromCartPage().equals(price);
     }
 
+    public P04_checkoutPage naviagteTOCheckOut()
+    {
+        Utility.clickEle(driver , checkoutBtn);
+        return new P04_checkoutPage(driver);
+    }
 
 
 

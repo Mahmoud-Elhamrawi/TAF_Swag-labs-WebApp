@@ -51,9 +51,9 @@ public class P02_HomePage {
 
 
     //add random products to cart
-    public P02_HomePage addRandomProductsToCart()
+    public P02_HomePage addRandomProductsToCart(int need , int total)
     {
-         Set<Integer> uniqeRandom =Utility.setRandoms(3,6);
+         Set<Integer> uniqeRandom =Utility.setRandoms(need,total);
          for (int random:uniqeRandom)
          {
              LogUtility.info("random number :"+random);
