@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="checkoutOverView suite">
+    <listeners>
+        <listener class-name="Listener.ITestResult"/>
+        <listener class-name="Listener.IInovkedListener"/>
+    </listeners>
+<test name="checkoutOverView test">
+    <classes>
+        <class name="Tests.TC06_checkoutOverViewTest"/>
+    </classes>
+</test>
+
+
+
+</suite>

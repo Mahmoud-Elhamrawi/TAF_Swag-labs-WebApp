@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CartPage suite">
+    <listeners>
+        <listener class-name="Listener.ITestResult"/>
+        <listener class-name="Listener.IInovkedListener"/>
+    </listeners>
+<test name="CartPage test">
+    <classes>
+        <class name="Tests.TC03_CartPage"/>
+    </classes>
+</test>
+
+
+
+</suite>
