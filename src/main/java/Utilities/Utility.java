@@ -107,6 +107,17 @@ public class Utility {
         return files[0];
     }
 
+    //add cookies
+    public static Set<Cookie> getAllCookies(WebDriver driver)
+    {
+        return driver.manage().getCookies();
+    }
+
+    public static void restoreCookies(WebDriver driver , Set<Cookie> cookies)
+    {
+        for (Cookie cookie:cookies)
+            driver.manage().addCookie(cookie);
+    }
 
 
 

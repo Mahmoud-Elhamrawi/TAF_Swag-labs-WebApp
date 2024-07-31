@@ -23,10 +23,10 @@ public class TC07_finishingOrderTest extends TestBase{
     public void completeOrder()
     {
       //TODO::login
-        new P01_LoginPage(getDriver())
-                .enterUserName(DataUtility.readJsonFile("userlogin","name"))
-                .enterUserPassword(DataUtility.readJsonFile("userlogin","password"))
-                .clickLoginBtn();
+      //  new P01_LoginPage(getDriver())
+             //   .enterUserName(DataUtility.readJsonFile("userlogin","name"))
+              //  .enterUserPassword(DataUtility.readJsonFile("userlogin","password"))
+              //  .clickLoginBtn();
         //TODO::add products to cart
         new P02_HomePage(getDriver())
                 .addProductsToCart()
