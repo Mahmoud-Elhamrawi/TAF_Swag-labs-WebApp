@@ -19,11 +19,7 @@ public class TC03_CartPage extends TestBase{
     @Test
     public void comparePricesOnHomePageWithCartPage()
     {
-      String priceOnHomePage =   new P01_LoginPage(getDriver())
-                .enterUserName(DataUtility.readJsonFile("userlogin","name"))
-                .enterUserPassword(DataUtility.readJsonFile("userlogin","password"))
-                .clickLoginBtn()
-                .addRandomProductsToCart(2,6)
+      String priceOnHomePage =    new P02_HomePage(getDriver()).addRandomProductsToCart(2,6)
                 .totalPriceOfSelectedItem() ;
         LogUtility.info("total price home page :"+priceOnHomePage);
       new P02_HomePage(getDriver()).navigateToCartPage();

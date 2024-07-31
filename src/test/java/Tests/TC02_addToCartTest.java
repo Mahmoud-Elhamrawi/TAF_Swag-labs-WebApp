@@ -21,11 +21,8 @@ public class TC02_addToCartTest extends TestBase{
     @Test
     public void addProductsToCart()
     {
-       new P01_LoginPage(getDriver())
-               .enterUserName(DataUtility.readJsonFile("userlogin","name"))
-               .enterUserPassword(DataUtility.readJsonFile("userlogin","password"))
-               .clickLoginBtn()
-               .addProductsToCart() ;
+
+              new P02_HomePage(getDriver()).addProductsToCart() ;
 
         Assert.assertTrue(new P02_HomePage(getDriver()).compareCountCartWithSelectedProd());
 
@@ -36,11 +33,8 @@ public class TC02_addToCartTest extends TestBase{
     @Test
     public void addRandomProductsToCart()
     {
-        new P01_LoginPage(getDriver())
-                .enterUserName(DataUtility.readJsonFile("userlogin","name"))
-                .enterUserPassword(DataUtility.readJsonFile("userlogin","password"))
-                .clickLoginBtn()
-                .addRandomProductsToCart(2,6) ;
+
+        new P02_HomePage(getDriver()).addRandomProductsToCart(2,6) ;
 
 
         Assert.assertTrue(new P02_HomePage(getDriver()).compareCountCartWithSelectedProd());
@@ -54,11 +48,8 @@ public class TC02_addToCartTest extends TestBase{
     @Test
     public void navigateToCartPage()
     {
-        new P01_LoginPage(getDriver())
-                .enterUserName(DataUtility.readJsonFile("userlogin","name"))
-                .enterUserPassword(DataUtility.readJsonFile("userlogin","password"))
-                .clickLoginBtn()
-                .addRandomProductsToCart(2,6)
+
+        new P02_HomePage(getDriver()).addRandomProductsToCart(2,6)
                 .navigateToCartPage();
         LogUtility.info("cartPageUrl: "+DataUtility.readPropertyFile("env","cartPage"));
 

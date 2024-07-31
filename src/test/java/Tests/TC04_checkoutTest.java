@@ -26,10 +26,10 @@ public class TC04_checkoutTest  extends  TestBase{
     public void checkoutProcess()
     {
         //TODO::login
-        new P01_LoginPage(getDriver())
-                .enterUserName(DataUtility.readJsonFile("userlogin","name"))
-                .enterUserPassword(DataUtility.readJsonFile("userlogin","password"))
-                .clickLoginBtn();
+       // new P01_LoginPage(getDriver())
+              //  .enterUserName(DataUtility.readJsonFile("userlogin","name"))
+              //  .enterUserPassword(DataUtility.readJsonFile("userlogin","password"))
+              //  .clickLoginBtn();
 
         //TODO::add products to cart
         new P02_HomePage(getDriver())
