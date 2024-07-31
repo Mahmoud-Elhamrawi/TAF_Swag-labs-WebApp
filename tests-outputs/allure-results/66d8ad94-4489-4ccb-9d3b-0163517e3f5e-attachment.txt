@@ -1,0 +1,16 @@
+[INFO] 31-07-2024 17:53:21 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : loginSteps
+[INFO] 31-07-2024 17:54:10 [main] [Tests.TestBase.loginSteps(TestBase.java:25)] - open browser
+[INFO] 31-07-2024 17:54:13 [main] [Tests.TestBase.loginSteps(TestBase.java:28)] - redirect to base url
+[INFO] 31-07-2024 17:54:18 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : starting
+[INFO] 31-07-2024 17:54:21 [main] [Tests.TestBase.starting(TestBase.java:47)] - open browser
+[INFO] 31-07-2024 17:54:32 [main] [Tests.TestBase.starting(TestBase.java:50)] - redirect to base url
+[INFO] 31-07-2024 17:54:36 [main] [Listener.ITestResult.onTestStart(ITestResult.java:9)] - start execute tc
+[INFO] 31-07-2024 17:54:36 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : validLoginTC
+[ERROR] 31-07-2024 17:54:47 [main] [Listener.IInovkedListener.afterInvocation(IInovkedListener.java:40)] - fail...validLoginTC
+[INFO] 31-07-2024 17:54:48 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : deleteCookie
+[INFO] 31-07-2024 17:54:48 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : loginSteps
+[INFO] 31-07-2024 17:54:55 [main] [Tests.TestBase.loginSteps(TestBase.java:25)] - open browser
+[INFO] 31-07-2024 17:55:18 [main] [Tests.TestBase.loginSteps(TestBase.java:28)] - redirect to base url
+[INFO] 31-07-2024 17:55:27 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : starting
+[INFO] 31-07-2024 17:55:33 [main] [Tests.TestBase.starting(TestBase.java:47)] - open browser
+[INFO] 31-07-2024 17:55:39 [main] [Tests.TestBase.starting(TestBase.java:50)] - redirect to base url

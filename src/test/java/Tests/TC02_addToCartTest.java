@@ -6,6 +6,7 @@ import Pages.P01_LoginPage;
 import Pages.P02_HomePage;
 import Utilities.DataUtility;
 import Utilities.LogUtility;
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -17,7 +18,12 @@ public class TC02_addToCartTest extends TestBase{
 
 
 
-
+    @Description("add All products to cart :")
+    @Severity(SeverityLevel.MINOR)
+    @Owner("elhamrawi")
+    @Epic("Web App")
+    @Feature("add prods to cart ")
+    @Story("valid use case")
     @Test
     public void addProductsToCart()
     {
@@ -29,7 +35,12 @@ public class TC02_addToCartTest extends TestBase{
 
 
     }
-
+    @Description("add Random products to cart :")
+    @Severity(SeverityLevel.MINOR)
+    @Owner("elhamrawi")
+    @Epic("Web App")
+    @Feature("add prods to cart ")
+    @Story("valid use case")
     @Test
     public void addRandomProductsToCart()
     {
@@ -43,8 +54,12 @@ public class TC02_addToCartTest extends TestBase{
 
 
 
-
-
+    @Description("navigate To Cart Page :")
+    @Severity(SeverityLevel.MINOR)
+    @Owner("elhamrawi")
+    @Epic("Web App")
+    @Feature("navigate To Cart Page ")
+    @Story("valid use case")
     @Test
     public void navigateToCartPage()
     {

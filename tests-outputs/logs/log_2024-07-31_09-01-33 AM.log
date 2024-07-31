@@ -1,0 +1,40 @@
+[INFO] 31-07-2024 09:01:33 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : loginSteps
+[INFO] 31-07-2024 09:01:50 [main] [Tests.TestBase.loginSteps(TestBase.java:25)] - open browser
+[INFO] 31-07-2024 09:02:02 [main] [Tests.TestBase.loginSteps(TestBase.java:28)] - redirect to base url
+[INFO] 31-07-2024 09:02:06 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : starting
+[INFO] 31-07-2024 09:02:09 [main] [Tests.TestBase.starting(TestBase.java:47)] - open browser
+[INFO] 31-07-2024 09:02:15 [main] [Tests.TestBase.starting(TestBase.java:50)] - redirect to base url
+[INFO] 31-07-2024 09:02:17 [main] [Listener.ITestResult.onTestStart(ITestResult.java:9)] - start execute tc
+[INFO] 31-07-2024 09:02:17 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : addProductsToCart
+[INFO] 31-07-2024 09:02:17 [main] [Pages.P02_HomePage.addProductsToCart(P02_HomePage.java:41)] - products are add: 1
+[ERROR] 31-07-2024 09:02:27 [main] [Pages.P02_HomePage.getCountCart(P02_HomePage.java:114)] - Expected condition failed: waiting for visibility of element located by By.className: shopping_cart_badge (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.73, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\ELHAMR~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63532}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63532/devtoo..., se:cdpVersion: 127.0.6533.73, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9eae74dfb9d8e6b9bfe1c5eccd1bb13f
+[INFO] 31-07-2024 09:02:37 [main] [Pages.P02_HomePage.getSelectedProducts(P02_HomePage.java:123)] - Count of Products are selected : 0
+[INFO] 31-07-2024 09:02:37 [main] [Listener.ITestResult.onTestSuccess(ITestResult.java:13)] - tc pass...
+[INFO] 31-07-2024 09:02:37 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : tearDown
+[INFO] 31-07-2024 09:02:39 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : starting
+[INFO] 31-07-2024 09:02:41 [main] [Tests.TestBase.starting(TestBase.java:47)] - open browser
+[INFO] 31-07-2024 09:02:47 [main] [Tests.TestBase.starting(TestBase.java:50)] - redirect to base url
+[INFO] 31-07-2024 09:02:47 [main] [Listener.ITestResult.onTestStart(ITestResult.java:9)] - start execute tc
+[INFO] 31-07-2024 09:02:47 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : addRandomProductsToCart
+[INFO] 31-07-2024 09:02:47 [main] [Pages.P02_HomePage.addRandomProductsToCart(P02_HomePage.java:58)] - random number :1
+[INFO] 31-07-2024 09:02:48 [main] [Pages.P02_HomePage.addRandomProductsToCart(P02_HomePage.java:58)] - random number :6
+[INFO] 31-07-2024 09:02:48 [main] [Pages.P02_HomePage.getCountCart(P02_HomePage.java:109)] - Count of products on cart: 2
+[INFO] 31-07-2024 09:02:48 [main] [Pages.P02_HomePage.getSelectedProducts(P02_HomePage.java:123)] - Count of Products are selected : 2
+[INFO] 31-07-2024 09:02:48 [main] [Listener.ITestResult.onTestSuccess(ITestResult.java:13)] - tc pass...
+[INFO] 31-07-2024 09:02:48 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : tearDown
+[INFO] 31-07-2024 09:02:49 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : starting
+[INFO] 31-07-2024 09:02:51 [main] [Tests.TestBase.starting(TestBase.java:47)] - open browser
+[INFO] 31-07-2024 09:03:00 [main] [Tests.TestBase.starting(TestBase.java:50)] - redirect to base url
+[INFO] 31-07-2024 09:03:01 [main] [Listener.ITestResult.onTestStart(ITestResult.java:9)] - start execute tc
+[INFO] 31-07-2024 09:03:01 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : navigateToCartPage
+[INFO] 31-07-2024 09:03:01 [main] [Pages.P02_HomePage.addRandomProductsToCart(P02_HomePage.java:58)] - random number :4
+[INFO] 31-07-2024 09:03:01 [main] [Pages.P02_HomePage.addRandomProductsToCart(P02_HomePage.java:58)] - random number :5
+[INFO] 31-07-2024 09:03:02 [main] [Tests.TC02_addToCartTest.navigateToCartPage(TC02_addToCartTest.java:60)] - cartPageUrl: https://www.saucedemo.com/cart.html
+[INFO] 31-07-2024 09:03:02 [main] [Listener.ITestResult.onTestSuccess(ITestResult.java:13)] - tc pass...
+[INFO] 31-07-2024 09:03:02 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : tearDown
+[INFO] 31-07-2024 09:03:02 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : deleteCookie

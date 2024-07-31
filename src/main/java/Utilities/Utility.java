@@ -2,6 +2,7 @@ package Utilities;
 
 import com.assertthat.selenium_shutterbug.core.Capture;
 import com.assertthat.selenium_shutterbug.core.Shutterbug;
+import io.qameta.allure.Allure;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,6 +12,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Array;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.*;
@@ -50,9 +53,16 @@ public class Utility {
     //TODO::Take screen shots
 
     public static void takeScreenShot(WebDriver driver , String screenName) throws IOException {
-        File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        File dis = new File(screen_Path + screenName + "_" +timeStemp()+".png");
-        FileUtils.copyFile(src,dis);
+        try {
+            File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+            File dis = new File(screen_Path + screenName + "_" +timeStemp()+".png");
+            FileUtils.copyFile(src,dis);
+            Allure.addAttachment(screenName , Files.newInputStream(Path.of(dis.getPath())));
+        }catch (Exception e)
+        {
+            LogUtility.error(e.getMessage());
+        }
+
     }
 
     //TODO:take ful screen shots

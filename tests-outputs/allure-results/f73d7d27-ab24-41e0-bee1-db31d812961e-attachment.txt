@@ -1,0 +1,6 @@
+[INFO] 31-07-2024 18:05:08 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : loginSteps
+[INFO] 31-07-2024 18:05:13 [main] [Tests.TestBase.loginSteps(TestBase.java:25)] - open browser
+[INFO] 31-07-2024 18:05:20 [main] [Tests.TestBase.loginSteps(TestBase.java:28)] - redirect to base url
+[INFO] 31-07-2024 18:05:22 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : starting
+[INFO] 31-07-2024 18:05:24 [main] [Tests.TestBase.starting(TestBase.java:47)] - open browser
+[INFO] 31-07-2024 18:05:31 [main] [Tests.TestBase.starting(TestBase.java:50)] - redirect to base url

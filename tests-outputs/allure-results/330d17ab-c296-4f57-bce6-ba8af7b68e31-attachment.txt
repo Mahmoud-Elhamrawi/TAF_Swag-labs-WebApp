@@ -1,0 +1,72 @@
+[INFO] 31-07-2024 17:53:21 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : loginSteps
+[INFO] 31-07-2024 17:54:10 [main] [Tests.TestBase.loginSteps(TestBase.java:25)] - open browser
+[INFO] 31-07-2024 17:54:13 [main] [Tests.TestBase.loginSteps(TestBase.java:28)] - redirect to base url
+[INFO] 31-07-2024 17:54:18 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : starting
+[INFO] 31-07-2024 17:54:21 [main] [Tests.TestBase.starting(TestBase.java:47)] - open browser
+[INFO] 31-07-2024 17:54:32 [main] [Tests.TestBase.starting(TestBase.java:50)] - redirect to base url
+[INFO] 31-07-2024 17:54:36 [main] [Listener.ITestResult.onTestStart(ITestResult.java:9)] - start execute tc
+[INFO] 31-07-2024 17:54:36 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : validLoginTC
+[ERROR] 31-07-2024 17:54:47 [main] [Listener.IInovkedListener.afterInvocation(IInovkedListener.java:40)] - fail...validLoginTC
+[INFO] 31-07-2024 17:54:48 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : deleteCookie
+[INFO] 31-07-2024 17:54:48 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : loginSteps
+[INFO] 31-07-2024 17:54:55 [main] [Tests.TestBase.loginSteps(TestBase.java:25)] - open browser
+[INFO] 31-07-2024 17:55:18 [main] [Tests.TestBase.loginSteps(TestBase.java:28)] - redirect to base url
+[INFO] 31-07-2024 17:55:27 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : starting
+[INFO] 31-07-2024 17:55:33 [main] [Tests.TestBase.starting(TestBase.java:47)] - open browser
+[INFO] 31-07-2024 17:55:39 [main] [Tests.TestBase.starting(TestBase.java:50)] - redirect to base url
+[INFO] 31-07-2024 17:55:48 [main] [Listener.ITestResult.onTestStart(ITestResult.java:9)] - start execute tc
+[INFO] 31-07-2024 17:55:48 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : addProductsToCart
+[INFO] 31-07-2024 17:55:49 [main] [Pages.P02_HomePage.addProductsToCart(P02_HomePage.java:41)] - products are add: 6
+[INFO] 31-07-2024 17:55:49 [main] [Pages.P02_HomePage.getCountCart(P02_HomePage.java:109)] - Count of products on cart: 6
+[INFO] 31-07-2024 17:55:49 [main] [Pages.P02_HomePage.getSelectedProducts(P02_HomePage.java:123)] - Count of Products are selected : 6
+[INFO] 31-07-2024 17:55:50 [main] [Listener.ITestResult.onTestSuccess(ITestResult.java:13)] - tc pass...
+[INFO] 31-07-2024 17:55:50 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : tearDown
+[INFO] 31-07-2024 17:55:55 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : starting
+[INFO] 31-07-2024 17:55:57 [main] [Tests.TestBase.starting(TestBase.java:47)] - open browser
+[INFO] 31-07-2024 17:56:04 [main] [Tests.TestBase.starting(TestBase.java:50)] - redirect to base url
+[INFO] 31-07-2024 17:56:08 [main] [Listener.ITestResult.onTestStart(ITestResult.java:9)] - start execute tc
+[INFO] 31-07-2024 17:56:08 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : addRandomProductsToCart
+[INFO] 31-07-2024 17:56:08 [main] [Pages.P02_HomePage.addRandomProductsToCart(P02_HomePage.java:58)] - random number :2
+[INFO] 31-07-2024 17:56:09 [main] [Pages.P02_HomePage.addRandomProductsToCart(P02_HomePage.java:58)] - random number :6
+[INFO] 31-07-2024 17:56:09 [main] [Pages.P02_HomePage.getCountCart(P02_HomePage.java:109)] - Count of products on cart: 2
+[INFO] 31-07-2024 17:56:09 [main] [Pages.P02_HomePage.getSelectedProducts(P02_HomePage.java:123)] - Count of Products are selected : 2
+[INFO] 31-07-2024 17:56:09 [main] [Listener.ITestResult.onTestSuccess(ITestResult.java:13)] - tc pass...
+[INFO] 31-07-2024 17:56:09 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : tearDown
+[INFO] 31-07-2024 17:56:14 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : starting
+[INFO] 31-07-2024 17:56:16 [main] [Tests.TestBase.starting(TestBase.java:47)] - open browser
+[INFO] 31-07-2024 17:56:24 [main] [Tests.TestBase.starting(TestBase.java:50)] - redirect to base url
+[INFO] 31-07-2024 17:56:30 [main] [Listener.ITestResult.onTestStart(ITestResult.java:9)] - start execute tc
+[INFO] 31-07-2024 17:56:30 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : navigateToCartPage
+[INFO] 31-07-2024 17:56:30 [main] [Pages.P02_HomePage.addRandomProductsToCart(P02_HomePage.java:58)] - random number :1
+[INFO] 31-07-2024 17:56:31 [main] [Pages.P02_HomePage.addRandomProductsToCart(P02_HomePage.java:58)] - random number :2
+[INFO] 31-07-2024 17:56:31 [main] [Tests.TC02_addToCartTest.navigateToCartPage(TC02_addToCartTest.java:54)] - cartPageUrl: https://www.saucedemo.com/cart.html
+[INFO] 31-07-2024 17:56:36 [main] [Listener.ITestResult.onTestSuccess(ITestResult.java:13)] - tc pass...
+[INFO] 31-07-2024 17:56:36 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : tearDown
+[INFO] 31-07-2024 17:56:45 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : deleteCookie
+[INFO] 31-07-2024 17:56:45 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : loginSteps
+[INFO] 31-07-2024 17:56:50 [main] [Tests.TestBase.loginSteps(TestBase.java:25)] - open browser
+[INFO] 31-07-2024 17:57:09 [main] [Tests.TestBase.loginSteps(TestBase.java:28)] - redirect to base url
+[INFO] 31-07-2024 17:57:11 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : starting
+[INFO] 31-07-2024 17:57:15 [main] [Tests.TestBase.starting(TestBase.java:47)] - open browser
+[INFO] 31-07-2024 17:57:25 [main] [Tests.TestBase.starting(TestBase.java:50)] - redirect to base url
+[INFO] 31-07-2024 17:57:30 [main] [Listener.ITestResult.onTestStart(ITestResult.java:9)] - start execute tc
+[INFO] 31-07-2024 17:57:30 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : comparePricesOnHomePageWithCartPage
+[INFO] 31-07-2024 17:57:30 [main] [Pages.P02_HomePage.addRandomProductsToCart(P02_HomePage.java:58)] - random number :3
+[INFO] 31-07-2024 17:57:30 [main] [Pages.P02_HomePage.addRandomProductsToCart(P02_HomePage.java:58)] - random number :6
+[INFO] 31-07-2024 17:57:30 [main] [Pages.P02_HomePage.totalPriceOfSelectedItem(P02_HomePage.java:78)] - totalPriceOfSelectedItem : 31.98
+[INFO] 31-07-2024 17:57:30 [main] [Tests.TC03_CartPage.comparePricesOnHomePageWithCartPage(TC03_CartPage.java:24)] - total price home page :31.98
+[INFO] 31-07-2024 17:57:30 [main] [Pages.P03_cartPage.totalPriceOfProdsFromCartPage(P03_cartPage.java:37)] - total price on cart page :31.98
+[INFO] 31-07-2024 17:57:31 [main] [Listener.ITestResult.onTestSuccess(ITestResult.java:13)] - tc pass...
+[INFO] 31-07-2024 17:57:31 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : tearDown
+[INFO] 31-07-2024 17:57:33 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : deleteCookie
+[INFO] 31-07-2024 17:57:33 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : loginSteps
+[INFO] 31-07-2024 17:57:34 [main] [Tests.TestBase.loginSteps(TestBase.java:25)] - open browser
+[INFO] 31-07-2024 17:57:45 [main] [Tests.TestBase.loginSteps(TestBase.java:28)] - redirect to base url
+[INFO] 31-07-2024 17:57:49 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : starting
+[INFO] 31-07-2024 17:57:52 [main] [Tests.TestBase.starting(TestBase.java:47)] - open browser
+[INFO] 31-07-2024 17:58:02 [main] [Tests.TestBase.starting(TestBase.java:50)] - redirect to base url
+[INFO] 31-07-2024 17:58:07 [main] [Listener.ITestResult.onTestStart(ITestResult.java:9)] - start execute tc
+[INFO] 31-07-2024 17:58:07 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : checkoutProcess
+[INFO] 31-07-2024 17:58:07 [main] [Pages.P02_HomePage.addRandomProductsToCart(P02_HomePage.java:58)] - random number :1
+[INFO] 31-07-2024 17:58:07 [main] [Pages.P02_HomePage.addRandomProductsToCart(P02_HomePage.java:58)] - random number :6
+[INFO] 31-07-2024 17:58:10 [main] [Tests.TC04_checkoutTest.checkoutProcess(TC04_checkoutTest.java:44)] - fTest-2024-07--31 || 5:53:17 PMlTest-2024-07--31 || 5:53:17 PM788445

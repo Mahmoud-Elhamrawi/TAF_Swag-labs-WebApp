@@ -16,7 +16,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 import static DriverFactory.DriverFactory.getDriver;
-import static Utilities.Utility.takeScreenShot;
 
 
 public class IInovkedListener implements IInvokedMethodListener {
@@ -37,12 +36,13 @@ public class IInovkedListener implements IInvokedMethodListener {
             throw new RuntimeException(e);
         }
         if (testResult.getStatus() == ITestResult.FAILURE) {
-            LogUtility.error("fail..." + testResult.getName());
+               LogUtility.error("fail..." + testResult.getName());
             try {
-                takeScreenShot(getDriver(), testResult.getName());
+                Utility.takeScreenShot(getDriver(),testResult.getName());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+
             //Utility.takeFullScreenShot(getDriver(),new P02_HomePage(getDriver()).iconCartEle());
         }
     }

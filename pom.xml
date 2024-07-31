@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <seleiumversion>4.23.0</seleiumversion>
@@ -117,8 +117,10 @@
 
     </dependencies>
 
-<build>
-<!--    <directory>tests-outputs/target</directory>-->
+
+
+       <build>
+    <directory>tests-outputs/target</directory>
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -129,13 +131,10 @@
                     -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                 </argLine>
                 <suiteXmlFiles>
-                    <suiteXmlFile>${suite.regression}</suiteXmlFile>
+                    <suiteXmlFile>${suite.addToCart}</suiteXmlFile>
                 </suiteXmlFiles>
             </configuration>
-
-
         </plugin>
-
     </plugins>
 </build>
 

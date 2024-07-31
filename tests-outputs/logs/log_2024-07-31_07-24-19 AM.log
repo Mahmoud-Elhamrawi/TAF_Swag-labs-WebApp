@@ -1,0 +1,6 @@
+[INFO] 31-07-2024 07:24:20 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : starting
+[INFO] 31-07-2024 07:24:22 [main] [Tests.TestBase.starting(TestBase.java:18)] - open browser
+[INFO] 31-07-2024 07:24:30 [main] [Tests.TestBase.starting(TestBase.java:21)] - redirect to base url
+[INFO] 31-07-2024 07:24:30 [main] [Listener.ITestResult.onTestStart(ITestResult.java:9)] - start execute tc
+[INFO] 31-07-2024 07:24:30 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : validLoginTC
+[ERROR] 31-07-2024 07:24:31 [main] [Listener.IInovkedListener.afterInvocation(IInovkedListener.java:40)] - fail...validLoginTC

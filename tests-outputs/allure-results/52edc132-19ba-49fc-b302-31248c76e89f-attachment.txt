@@ -1,0 +1,24 @@
+[INFO] 31-07-2024 18:05:08 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : loginSteps
+[INFO] 31-07-2024 18:05:13 [main] [Tests.TestBase.loginSteps(TestBase.java:25)] - open browser
+[INFO] 31-07-2024 18:05:20 [main] [Tests.TestBase.loginSteps(TestBase.java:28)] - redirect to base url
+[INFO] 31-07-2024 18:05:22 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : starting
+[INFO] 31-07-2024 18:05:24 [main] [Tests.TestBase.starting(TestBase.java:47)] - open browser
+[INFO] 31-07-2024 18:05:31 [main] [Tests.TestBase.starting(TestBase.java:50)] - redirect to base url
+[INFO] 31-07-2024 18:05:34 [main] [Listener.ITestResult.onTestStart(ITestResult.java:9)] - start execute tc
+[INFO] 31-07-2024 18:05:34 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : addProductsToCart
+[INFO] 31-07-2024 18:05:34 [main] [Pages.P02_HomePage.addProductsToCart(P02_HomePage.java:41)] - products are add: 6
+[INFO] 31-07-2024 18:05:35 [main] [Pages.P02_HomePage.getCountCart(P02_HomePage.java:109)] - Count of products on cart: 6
+[INFO] 31-07-2024 18:05:35 [main] [Pages.P02_HomePage.getSelectedProducts(P02_HomePage.java:123)] - Count of Products are selected : 6
+[INFO] 31-07-2024 18:05:35 [main] [Listener.ITestResult.onTestSuccess(ITestResult.java:13)] - tc pass...
+[INFO] 31-07-2024 18:05:35 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : tearDown
+[INFO] 31-07-2024 18:05:35 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : starting
+[INFO] 31-07-2024 18:05:38 [main] [Tests.TestBase.starting(TestBase.java:47)] - open browser
+[INFO] 31-07-2024 18:05:48 [main] [Tests.TestBase.starting(TestBase.java:50)] - redirect to base url
+[INFO] 31-07-2024 18:05:51 [main] [Listener.ITestResult.onTestStart(ITestResult.java:9)] - start execute tc
+[INFO] 31-07-2024 18:05:51 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : addRandomProductsToCart
+[INFO] 31-07-2024 18:05:51 [main] [Pages.P02_HomePage.addRandomProductsToCart(P02_HomePage.java:58)] - random number :2
+[INFO] 31-07-2024 18:05:51 [main] [Pages.P02_HomePage.addRandomProductsToCart(P02_HomePage.java:58)] - random number :5
+[INFO] 31-07-2024 18:05:51 [main] [Pages.P02_HomePage.getCountCart(P02_HomePage.java:109)] - Count of products on cart: 2
+[INFO] 31-07-2024 18:05:52 [main] [Pages.P02_HomePage.getSelectedProducts(P02_HomePage.java:123)] - Count of Products are selected : 2
+[INFO] 31-07-2024 18:05:52 [main] [Listener.ITestResult.onTestSuccess(ITestResult.java:13)] - tc pass...
+[INFO] 31-07-2024 18:05:52 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : tearDown

@@ -1,0 +1,3 @@
+[INFO] 31-07-2024 17:53:21 [main] [Listener.IInovkedListener.beforeInvocation(IInovkedListener.java:25)] - beforeInvocation : loginSteps
+[INFO] 31-07-2024 17:54:10 [main] [Tests.TestBase.loginSteps(TestBase.java:25)] - open browser
+[INFO] 31-07-2024 17:54:13 [main] [Tests.TestBase.loginSteps(TestBase.java:28)] - redirect to base url
