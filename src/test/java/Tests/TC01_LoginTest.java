@@ -29,7 +29,7 @@ public class TC01_LoginTest extends TestBase {
                 .enterUserPassword(userPassword)
                 .clickLoginBtn();
 
-        Assert.assertTrue(new P01_LoginPage(getDriver()).assertUrl(DataUtility.readPropertyFile("env","homepage")));
+        Assert.assertFalse(new P01_LoginPage(getDriver()).assertUrl(DataUtility.readPropertyFile("env","homepage")));
 
     }
 

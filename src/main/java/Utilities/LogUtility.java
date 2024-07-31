@@ -4,7 +4,7 @@ package Utilities;
 import org.apache.logging.log4j.LogManager ;
 public class LogUtility {
 
-
+    public static String log_path ="tests-outputs/logs/";
     public static void trace(String msg)
     {
         LogManager.getLogger(Thread.currentThread().getStackTrace()[2].toString()).trace(msg);

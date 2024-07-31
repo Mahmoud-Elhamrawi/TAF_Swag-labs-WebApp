@@ -10,14 +10,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 public class Utility {
+    //tests-outputs/screen_shoots
     public static final String screen_Path ="tests-outputs/screen_shoots/";
 
     //TODO::click on ele
@@ -95,6 +94,20 @@ public class Utility {
            }
            return setNumbers ;
        }
+
+//function to get latest file in logs
+    public static File getLatestFile(String path)
+    {
+        File file = new File(path);
+        File[] files =file.listFiles();
+        assert files != null;
+        if(files.length==0)
+            return null;
+        Arrays.sort(files,Comparator.comparingLong(File::lastModified).reversed());
+        return files[0];
+    }
+
+
 
 
 }
