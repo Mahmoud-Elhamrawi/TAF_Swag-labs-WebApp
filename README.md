@@ -14,5 +14,6 @@
   <li>Login</li>
   <li>Add to cart</li>
   <li>cart page</li>
-  <li>sh order process</li>>
+  <li>checkout process</li>
+  <li>finish order</li>
 </ol>
