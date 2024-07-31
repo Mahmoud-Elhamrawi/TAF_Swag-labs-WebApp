@@ -25,6 +25,7 @@
         <shutterbugVersion>1.6</shutterbugVersion>
         <aspectj.version>1.9.20.1</aspectj.version>
         <surefile>3.3.1</surefile>
+        <allurmaven>2.13.0</allurmaven>
         <suite.login>test-reunner/login.xml</suite.login>
         <suite.addToCart>test-reunner/HomePage.xml</suite.addToCart>
         <suite.cartPage>test-reunner/cartPage.xml</suite.cartPage>
@@ -32,6 +33,7 @@
         <suite.checkoutStepTwo>test-reunner/checkoutoverview.xml</suite.checkoutStepTwo>
         <suite.finishOrder>test-reunner/finishOrder.xml</suite.finishOrder>
         <suite.regression>test-reunner/Regression.xml</suite.regression>
+
     </properties>
 
     <dependencies>
@@ -115,28 +117,120 @@
                 <version>${aspectj.version}</version>
             </dependency>
 
+        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-plugin-api -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-plugin-api</artifactId>
+            <version>2.30.0</version>
+        </dependency>
+
+
     </dependencies>
 
+    <profiles>
+        <profile>
+            <id>addToCart</id>
+            <build>
+                <directory>tests-outputs/target</directory>
+                <plugins>
+
+                    <plugin>
+                        <groupId>io.qameta.allure</groupId>
+                        <artifactId>allure-maven</artifactId>
+
+                        <configuration>
+                            <reportVersion>${allureVersion}</reportVersion>
+                        </configuration>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+
+                        <configuration>
+
+                            <suiteXmlFiles>
+                                <suiteXmlFile>${suite.addToCart}</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>finishOrder</id>
+            <build>
+                <directory>tests-outputs/target</directory>
+                <plugins>
+
+                    <plugin>
+                        <groupId>io.qameta.allure</groupId>
+                        <artifactId>allure-maven</artifactId>
+
+                        <configuration>
+                            <reportVersion>${allureVersion}</reportVersion>
+                        </configuration>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+
+                        <configuration>
+
+                            <suiteXmlFiles>
+                                <suiteXmlFile>${suite.finishOrder}</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+
+                </plugins>
+            </build>
+        </profile>
+
+    </profiles>
 
 
-       <build>
-    <directory>tests-outputs/target</directory>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>${surefile}</version>
-            <configuration>
-                <argLine>
-                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-                </argLine>
-                <suiteXmlFiles>
-                    <suiteXmlFile>${suite.addToCart}</suiteXmlFile>
-                </suiteXmlFiles>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
 
 
+    <build>
+        <directory>tests-outputs/target</directory>
+        <plugins>
+
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>${allurmaven}</version>
+                <executions>
+                    <execution>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>
+                                serve
+                            </goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <reportVersion>${allureVersion}</reportVersion>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefile}</version>
+                <configuration>
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suite.addToCart}</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
 </project>
