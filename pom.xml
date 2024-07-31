@@ -23,7 +23,15 @@
         <javafakerVersion>1.0.2</javafakerVersion>
         <commonVersion>2.16.1</commonVersion>
         <shutterbugVersion>1.6</shutterbugVersion>
-
+        <aspectj.version>1.9.20.1</aspectj.version>
+        <surefile>3.3.1</surefile>
+        <suite.login>test-reunner/login.xml</suite.login>
+        <suite.addToCart>test-reunner/HomePage.xml</suite.addToCart>
+        <suite.cartPage>test-reunner/cartPage.xml</suite.cartPage>
+        <suite.checkoutStepOne>test-reunner/checkoutStepOne.xml</suite.checkoutStepOne>
+        <suite.checkoutStepTwo>test-reunner/checkoutoverview.xml</suite.checkoutStepTwo>
+        <suite.finishOrder>test-reunner/finishOrder.xml</suite.finishOrder>
+        <suite.regression>test-reunner/Regression.xml</suite.regression>
     </properties>
 
     <dependencies>
@@ -101,13 +109,35 @@
             </exclusions>
         </dependency>
 
-
-
-
-
-
-
+              <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectj.version}</version>
+            </dependency>
 
     </dependencies>
+
+<build>
+<!--    <directory>tests-outputs/target</directory>-->
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>${surefile}</version>
+            <configuration>
+                <argLine>
+                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                </argLine>
+                <suiteXmlFiles>
+                    <suiteXmlFile>${suite.regression}</suiteXmlFile>
+                </suiteXmlFiles>
+            </configuration>
+
+
+        </plugin>
+
+    </plugins>
+</build>
+
 
 </project>
